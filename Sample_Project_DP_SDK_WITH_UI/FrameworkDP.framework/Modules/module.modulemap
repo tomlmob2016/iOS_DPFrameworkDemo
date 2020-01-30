@@ -1,0 +1,11 @@
+framework module FrameworkDP {
+  umbrella header "FrameworkDP.h"
+
+  export *
+  module * { export * }
+}
+
+module FrameworkDP.Swift {
+    header "FrameworkDP-Swift.h"
+    requires objc
+}

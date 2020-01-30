@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ogB-ZR-yBX">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SDK DEMO-->
+        <scene sceneID="cIJ-42-aQ3">
+            <objects>
+                <viewController storyboardIdentifier="DPInitialisationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gN0-Jk-O6c" customClass="DPInitialisationViewController" customModule="SDKSampleProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OgP-tk-qCP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GH7-pa-SzN">
+                                <rect key="frame" x="84" y="280.5" width="207" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iLO-Gi-o1I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="     Pay using Aggregator Hosted      ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="agregatorClicked:" destination="gN0-Jk-O6c" eventType="touchUpInside" id="nlv-O6-8Fe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9w-9w-yTG">
+                                <rect key="frame" x="84" y="380.5" width="207" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="17"/>
+                                <state key="normal" title="Pay using Merchant Hosted ">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="merchantClicked:" destination="gN0-Jk-O6c" eventType="touchUpInside" id="Qo6-O2-2OB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GH7-pa-SzN" firstAttribute="trailing" secondItem="n9w-9w-yTG" secondAttribute="trailing" id="2PC-Wo-hFA"/>
+                            <constraint firstItem="GH7-pa-SzN" firstAttribute="centerX" secondItem="SBE-9t-JwB" secondAttribute="centerX" id="5j8-QK-kKV"/>
+                            <constraint firstItem="n9w-9w-yTG" firstAttribute="top" secondItem="GH7-pa-SzN" secondAttribute="bottom" constant="50" id="9kZ-IE-NBQ"/>
+                            <constraint firstItem="n9w-9w-yTG" firstAttribute="height" secondItem="GH7-pa-SzN" secondAttribute="height" id="GFZ-d1-6Br"/>
+                            <constraint firstItem="GH7-pa-SzN" firstAttribute="centerY" secondItem="SBE-9t-JwB" secondAttribute="centerY" constant="-50" id="QvH-OF-TM9"/>
+                            <constraint firstItem="GH7-pa-SzN" firstAttribute="leading" secondItem="n9w-9w-yTG" secondAttribute="leading" id="UwJ-Fh-KdA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SBE-9t-JwB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SDK DEMO" largeTitleDisplayMode="always" id="OeM-nM-gvq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9e-6p-BaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376.80000000000001" y="-436.73163418290858"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YR0-2B-4vj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ogB-ZR-yBX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iFX-FI-kIt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gN0-Jk-O6c" kind="relationship" relationship="rootViewController" id="UCn-ac-JXZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSS-wK-8gj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1316" y="-436.73163418290858"/>
+        </scene>
+    </scenes>
+</document>
